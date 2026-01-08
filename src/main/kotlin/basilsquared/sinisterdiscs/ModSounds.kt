@@ -6,14 +6,14 @@ import net.minecraft.resources.Identifier
 import net.minecraft.sounds.SoundEvent
 
 object ModSounds {
-    // 1. Define the ID (Must match the "sound_event" in your jukebox_song JSON)
-    val WELCOME_HOME_ID: Identifier = Identifier.fromNamespaceAndPath("sinister-discs", "welcome_home")
+    //  tweak: adjust ID name to be more concise
+    val WELCOME_HOME_SOUND_ID: Identifier = Identifier.fromNamespaceAndPath("sinister-discs", "welcome_home")
 
-    // 2. Create the Event
-    val WELCOME_HOME_EVENT: SoundEvent = SoundEvent.createVariableRangeEvent(WELCOME_HOME_ID)
 
-    // 3. Register it
+    val WELCOME_HOME_EVENT: SoundEvent = SoundEvent.createVariableRangeEvent(WELCOME_HOME_SOUND_ID)
+
+
     fun register() {
-        Registry.register(BuiltInRegistries.SOUND_EVENT, WELCOME_HOME_ID, WELCOME_HOME_EVENT)
+        Registry.register(BuiltInRegistries.SOUND_EVENT, WELCOME_HOME_SOUND_ID, WELCOME_HOME_EVENT)
     }
 }
