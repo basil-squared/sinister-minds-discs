@@ -1,0 +1,51 @@
+{
+	"schemaVersion": 1,
+	"id": "sinister-discs",
+	"version": "1.0.0",
+	"name": "Sinister Discs",
+	"description": "Adds music discs from the Sinister Minds album.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://x.com/basilsquared",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "GPL-3.0",
+	"icon": "assets/sinister-discs/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "basilsquared.sinisterdiscs.SinisterDiscs",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "basilsquared.sinisterdiscs.SinisterDiscsClient",
+				"adapter": "kotlin"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "basilsquared.sinisterdiscs.SinisterDiscsDataGenerator",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"sinister-discs.mixins.json",
+		{
+			"config": "sinister-discs.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	}
+}
