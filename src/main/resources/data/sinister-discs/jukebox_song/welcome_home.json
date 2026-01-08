@@ -1,0 +1,8 @@
+{
+  "sound_event": "sinister-discs:welcome_home",
+  "description": {
+    "translate": "item.sinister-discs.welcome_home.desc"
+  },
+  "length_in_seconds": 38,
+  "comparator_output": 15
+}

@@ -1,0 +1,11 @@
+{
+  "welcome_home": {
+    "sounds": [
+      {
+        "name": "sinister-discs:records/welcome_home",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.item.sinister-discs.welcome_home"
+  }
+}

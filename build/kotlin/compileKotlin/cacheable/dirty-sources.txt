@@ -1,2 +1,0 @@
-/Users/kasenengel/sinister-minds-discs/src/main/kotlin/basilsquared/sinisterdiscs/ModItems.kt
-/Users/kasenengel/sinister-minds-discs/src/main/kotlin/basilsquared/sinisterdiscs/SinisterDiscs.kt

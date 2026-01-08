@@ -1,24 +1,41 @@
 package basilsquared.sinisterdiscs
 
-import basilsquared.sinisterdiscs.SinisterDiscs
-
-// Mojang: JukeboxSong is in world.item
-import net.minecraft.world.item.JukeboxSong
-import net.minecraft.world.item.
-import net.minecraft.world.item.RecordItem // Mojang calls MusicDiscItem "RecordItem"
-
-// Mojang: Registry stuff is in core.registries or resources
-import net.minecraft.resources.ResourceKey
+import net.minecraft.core.Registry
+import net.minecraft.core.registries.BuiltInRegistries
 import net.minecraft.core.registries.Registries
-import net.minecraft.resources.ResourceLocation
-import net.minecraft.world.item.Rarity
+import net.minecraft.resources.Identifier
+import net.minecraft.resources.ResourceKey
+import net.minecraft.world.item.Item
+import net.minecraft.world.item.JukeboxSong
 
-public object SinisterModItems {
-   val WELCOME_HOME: ResourceKey<JukeboxSong> = ResourceKey.create(
-      Registries.JUKEBOX_SONG,
-      ResourceLocation.fromNamespaceAndPath("sinister-discs", "welcome_home")
-   )
+object ModItems {
 
+    // 1. Create the ITEM KEY first (Defines the name)
+    val WELCOME_HOME_KEY: ResourceKey<Item> = ResourceKey.create(
+        Registries.ITEM,
+        Identifier.fromNamespaceAndPath("sinister-discs", "welcome_home")
+    )
 
-   val WELCOME_HOME_DISC = RecordItem(WELCOME_HOME, Item.Properties().stacksTo(1).rarity(Rarity.RARE))
+    // 2. Create the SONG KEY (for the jukebox logic)
+    val WELCOME_HOME_SONG_KEY: ResourceKey<JukeboxSong> = ResourceKey.create(
+        Registries.JUKEBOX_SONG,
+        Identifier.fromNamespaceAndPath("sinister-discs", "welcome_home")
+    )
+
+    // 3. Create the Item, PASSING THE KEY into Properties
+    val WELCOME_HOME_DISC_ITEM: Item = register(
+        WELCOME_HOME_KEY,
+        Item(
+            Item.Properties()
+                .setId(WELCOME_HOME_KEY) // <--- THIS IS THE FIX. It stops the crash.
+                .jukeboxPlayable(WELCOME_HOME_SONG_KEY)
+        )
+    )
+
+    // Helper function that takes the pre-made Key
+    private fun register(key: ResourceKey<Item>, item: Item): Item {
+        return Registry.register(BuiltInRegistries.ITEM, key, item)
+    }
+
+    fun register() {}
 }
