@@ -25,3 +25,8 @@ replay_pid*
 
 # Kotlin Gradle plugin data, see https://kotlinlang.org/docs/whatsnew20.html#new-directory-for-kotlin-data-in-gradle-projects
 .kotlin/
+
+# Needed for dev environment but not to actually develop the game
+run/
+# Not quite sure how needed the contents of .gradle are but if it gets to be a problem ill fix it
+.gradle
