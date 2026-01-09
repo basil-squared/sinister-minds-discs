@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "sinister-discs:item/i_miss_the_quiet"
+  }
+}

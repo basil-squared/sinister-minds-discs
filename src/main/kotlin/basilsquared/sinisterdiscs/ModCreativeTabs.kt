@@ -25,17 +25,23 @@ object ModCreativeTabs {
         .build()
 
     fun register() {
-
         Registry.register(
             BuiltInRegistries.CREATIVE_MODE_TAB,
             SINISTER_TAB_KEY,
             SINISTER_TAB
         )
 
-
         ItemGroupEvents.modifyEntriesEvent(SINISTER_TAB_KEY).register { content ->
-            content.accept(ModItems.WELCOME_HOME_DISC_ITEM)
-            // content.accept(ModItems.NEXT_ITEM)
+            // find all items belonging to the mod
+            BuiltInRegistries.ITEM.forEach { item ->
+                // get the ID
+                val id = BuiltInRegistries.ITEM.getKey(item)
+
+                // ignores shit that isnt mine
+                if (id.namespace == "sinister-discs") {
+                    content.accept(item)
+                }
+            }
         }
     }
 }

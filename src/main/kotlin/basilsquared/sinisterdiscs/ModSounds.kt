@@ -6,14 +6,23 @@ import net.minecraft.resources.Identifier
 import net.minecraft.sounds.SoundEvent
 
 object ModSounds {
-    //  tweak: adjust ID name to be more concise
-    val WELCOME_HOME_SOUND_ID: Identifier = Identifier.fromNamespaceAndPath("sinister-discs", "welcome_home")
+    private val SOUNDS_TO_REGISTER = mutableMapOf<Identifier, SoundEvent>()
+    private fun registerSound(name: String): SoundEvent {
+        val id = Identifier.fromNamespaceAndPath("sinister-discs", name)
+        val event = SoundEvent.createVariableRangeEvent(id)
+        SOUNDS_TO_REGISTER[id] = event
+        return event
+    }
+    val WELCOME_HOME = registerSound("welcome_home")
+    val I_MISS_THE_QUIET = registerSound("i_miss_the_quiet")
+    val YOU_MUST_ANSWER = registerSound("you_must_answer")
 
 
-    val WELCOME_HOME_EVENT: SoundEvent = SoundEvent.createVariableRangeEvent(WELCOME_HOME_SOUND_ID)
 
 
     fun register() {
-        Registry.register(BuiltInRegistries.SOUND_EVENT, WELCOME_HOME_SOUND_ID, WELCOME_HOME_EVENT)
+        SOUNDS_TO_REGISTER.forEach { (id, event) ->
+            Registry.register(BuiltInRegistries.SOUND_EVENT, id, event)
+        }
     }
 }

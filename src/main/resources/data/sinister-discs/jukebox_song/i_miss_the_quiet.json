@@ -1,0 +1,8 @@
+{
+  "sound_event": "sinister-discs:i_miss_the_quiet",
+  "description": {
+    "translate": "item.sinister-discs.welcome_home.desc"
+  },
+  "length_in_seconds": 243,
+  "comparator_output": 2
+}

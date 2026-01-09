@@ -1,11 +1,22 @@
 {
   "welcome_home": {
+    "category": "record",
+    "subtitle": "subtitles.item.sinister-discs.welcome_home",
     "sounds": [
       {
         "name": "sinister-discs:records/welcome_home",
         "stream": true
       }
-    ],
-    "subtitle": "subtitles.item.sinister-discs.welcome_home"
+    ]
+  },
+  "i_miss_the_quiet": {
+    "category": "record",
+    "subtitle": "subtitles.item.sinister-discs.i_miss_the_quiet",
+    "sounds": [
+      {
+        "name": "sinister-discs:records/i_miss_the_quiet",
+        "stream": true
+      }
+    ]
   }
 }
