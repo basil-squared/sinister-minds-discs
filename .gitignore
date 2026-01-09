@@ -29,4 +29,6 @@ replay_pid*
 # Needed for dev environment but not to actually develop the game
 run/
 # Not quite sure how needed the contents of .gradle are but if it gets to be a problem ill fix it
-.gradle
+.gradle/
+
+build/
