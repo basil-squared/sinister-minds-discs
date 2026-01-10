@@ -4,7 +4,7 @@
 
 
 
-##  Tracklist & Credits
+##  Credits
 This project would not be possible without the incredible work of the following artists. Please support them!
 
 Churgney Gurgney
@@ -21,7 +21,7 @@ Salesman
 1. Download the latest version of **Sinister Discs** from Modrinth.
 2. Install **Fabric API**, and **Fabric Language Kotlin** (required).
 3. Drop the `.jar` file into your `mods` folder.
-4. Launch the game and 
+4. Launch the game and get ready for the **Show of a lifetime..** mwahahahahaha
 
 
 **To the Artists:**
