@@ -3,7 +3,7 @@ name: Auto Release
 on:
   push:
     branches:
-      - main  
+      - main
 
 permissions:
   contents: write
@@ -12,20 +12,17 @@ jobs:
   build-and-release:
     runs-on: ubuntu-latest
     steps:
-      
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      
       - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
           java-version: '21'
           distribution: 'temurin'
 
-      
       - name: Calculate Version
         id: version
         uses: PaulHatch/semantic-version@v5.4.0
@@ -33,24 +30,19 @@ jobs:
           tag_prefix: "v"
           major_pattern: "(major)"
           minor_pattern: "(feat)"
-          
           version_format: "v${major}.${minor}.${patch}"
           bump_each_commit: false
           search_commit_body: true
-          
-          
-      
+
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      
       - name: Build with Gradle
         run: ./gradlew build -Pversion=${{ steps.version.outputs.version_tag }}
 
-      
-      - name: Create Release
+      - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
-        if: steps.version.outputs.version_tag != '' 
+        if: steps.version.outputs.version_tag != ''
         with:
           tag_name: ${{ steps.version.outputs.version_tag }}
           name: Release ${{ steps.version.outputs.version_tag }}
@@ -59,3 +51,22 @@ jobs:
             build/libs/*.jar
             !build/libs/*-sources.jar
             !build/libs/*-dev.jar
+
+      - name: Publish to Modrinth
+        uses: cloudnode-pro/modrinth-publish@v2
+        if: steps.version.outputs.version_tag != ''
+        with:
+          token: ${{ secrets.MODRINTH_TOKEN }}
+          project: sinister-discs-lordx
+          version: ${{ steps.version.outputs.version_tag }}
+          loaders: fabric
+          game-versions: 1.21.11
+          files: build/libs/*${{ steps.version.outputs.version_tag }}.jar
+          # Sets the release status to Draft as requested
+          status: draft
+          # Adds Fabric API and Fabric Language Kotlin as required dependencies
+          dependencies: |
+            [
+              {"project_id": "fabric-api", "dependency_type": "required"},
+              {"project_id": "fabric-language-kotlin", "dependency_type": "required"}
+            ]
