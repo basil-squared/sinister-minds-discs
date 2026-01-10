@@ -9,6 +9,6 @@ object SinisterDiscsDataGenerator: DataGeneratorEntrypoint {
         pack.addProvider(::ModItemDataProvider)
         pack.addProvider(::CreeperDiscPoolProvider)
         pack.addProvider(::TranslationProvider)
-
+        pack.addProvider( ::ModSoundsProvider)
     }
 }

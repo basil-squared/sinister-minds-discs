@@ -1,42 +1,162 @@
 {
-  "welcome_home": {
+  "beauty": {
     "category": "record",
-    "subtitle": "subtitles.item.sinister-discs.welcome_home",
     "sounds": [
       {
-        "name": "sinister-discs:records/welcome_home",
+        "name": "sinister-discs:records/beauty",
         "stream": true
       }
-    ]
+    ],
+    "subtitle": "subtitles.item.sinister-discs.beauty"
+  },
+  "big_misser": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "sinister-discs:records/big_misser",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.item.sinister-discs.big_misser"
+  },
+  "dont_come_back": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "sinister-discs:records/dont_come_back",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.item.sinister-discs.dont_come_back"
+  },
+  "feel_that_dread": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "sinister-discs:records/feel_that_dread",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.item.sinister-discs.feel_that_dread"
+  },
+  "i_did_that": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "sinister-discs:records/i_did_that",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.item.sinister-discs.i_did_that"
   },
   "i_miss_the_quiet": {
     "category": "record",
-    "subtitle": "subtitles.item.sinister-discs.i_miss_the_quiet",
     "sounds": [
       {
         "name": "sinister-discs:records/i_miss_the_quiet",
         "stream": true
       }
-    ]
+    ],
+    "subtitle": "subtitles.item.sinister-discs.i_miss_the_quiet"
   },
-  "you_must_answer": {
+  "meatshow": {
     "category": "record",
-    "subtitle": "subtitles.item.sinister-discs.you_must_answer",
     "sounds": [
       {
-        "name": "sinister-discs:records/you_must_answer",
+        "name": "sinister-discs:records/meatshow",
         "stream": true
       }
-    ]
+    ],
+    "subtitle": "subtitles.item.sinister-discs.meatshow"
   },
   "minds": {
     "category": "record",
-    "subtitle": "subtitles.item.sinister-discs.minds",
     "sounds": [
       {
         "name": "sinister-discs:records/minds",
         "stream": true
       }
-    ]
+    ],
+    "subtitle": "subtitles.item.sinister-discs.minds"
+  },
+  "one_last_ask": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "sinister-discs:records/one_last_ask",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.item.sinister-discs.one_last_ask"
+  },
+  "red_handed": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "sinister-discs:records/red_handed",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.item.sinister-discs.red_handed"
+  },
+  "runaway": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "sinister-discs:records/runaway",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.item.sinister-discs.runaway"
+  },
+  "scars": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "sinister-discs:records/scars",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.item.sinister-discs.scars"
+  },
+  "sinister": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "sinister-discs:records/sinister",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.item.sinister-discs.sinister"
+  },
+  "the_fire_rises": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "sinister-discs:records/the_fire_rises",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.item.sinister-discs.the_fire_rises"
+  },
+  "welcome_home": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "sinister-discs:records/welcome_home",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.item.sinister-discs.welcome_home"
+  },
+  "you_must_answer": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "sinister-discs:records/you_must_answer",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.item.sinister-discs.you_must_answer"
   }
 }
