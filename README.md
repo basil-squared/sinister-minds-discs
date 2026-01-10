@@ -25,7 +25,7 @@ Salesman
 
 
 **To the Artists:**
-The goal of this mod is to share and celebrate music that fits a specific atmospheric aesthetic within Minecraft. I have done my best to credit every artist involved.
+The goal of this mod is to share and celebrate music that personally filled me with joy :)
 
 **If you are the copyright holder of any track included in this mod and wish for it to be removed, please contact me immediately.**
 
