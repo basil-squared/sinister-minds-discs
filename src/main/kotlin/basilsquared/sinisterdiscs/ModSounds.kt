@@ -15,19 +15,21 @@ object ModSounds {
         SOUNDS_TO_REGISTER[id] = event
         return event
     }
-
-   // quick lambda just to register everything
-    val sounds = { ->
-        for (id in SONG_IDS) {
-            registerSound(id)
-        }
+    @Suppress ("UNUSED")
+    val sounds = run  {
+    for (id in SONG_IDS) {
+        registerSound(id)
     }
+    }
+
+
 
 
 
 
     fun register() {
         SOUNDS_TO_REGISTER.forEach { (id, event) ->
+
             Registry.register(BuiltInRegistries.SOUND_EVENT, id, event)
         }
     }

@@ -20,7 +20,7 @@ object ModCreativeTabs {
 
 
     private val SINISTER_TAB: CreativeModeTab = FabricItemGroup.builder()
-        .icon { ItemStack(ModItems.WELCOME_HOME_DISC_ITEM) }
+        .icon { ItemStack(ModItems.ITEMS_INDEX["welcome_home"]!!) }
         .title(Component.translatable("itemGroup.sinister-discs.general"))
         .build()
 

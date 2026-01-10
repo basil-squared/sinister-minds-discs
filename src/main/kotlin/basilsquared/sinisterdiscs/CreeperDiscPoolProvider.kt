@@ -1,5 +1,6 @@
 package basilsquared.sinisterdiscs
 
+import basilsquared.sinisterdiscs.ModUtils.SONG_IDS
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider
 import net.minecraft.core.HolderLookup
@@ -17,10 +18,10 @@ class CreeperDiscPoolProvider(output: FabricDataOutput, registriesFuture: Comple
                 .setReplace(true)
         }
         val creeperDropKey: TagKey<Item> = TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("minecraft","creeper_drop_music_discs"))
-        addToVal(creeperDropKey,ModItems.WELCOME_HOME_DISC_ITEM)
-        addToVal(creeperDropKey, ModItems.I_MISS_THE_QUIET_DISC_ITEM)
-        addToVal(creeperDropKey, ModItems.YOU_MUST_ANSWER_DISC_ITEM)
-        addToVal(creeperDropKey, ModItems.MINDS_DISC_ITEM)
+        for (item in SONG_IDS ) {
+            addToVal(creeperDropKey, ModItems.ITEMS_INDEX[item]!!)
+        }
+
 
 
     }

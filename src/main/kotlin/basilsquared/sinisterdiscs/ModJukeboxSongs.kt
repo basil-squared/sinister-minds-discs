@@ -1,31 +1,34 @@
 package basilsquared.sinisterdiscs
 
 import basilsquared.sinisterdiscs.ModUtils.SONG_IDS
-import basilsquared.sinisterdiscs.ModUtils.createAllIdentifiers
+import basilsquared.sinisterdiscs.ModUtils.createIdentifier
 import net.minecraft.core.registries.Registries
-import net.minecraft.resources.Identifier
 import net.minecraft.resources.ResourceKey
 import net.minecraft.world.item.JukeboxSong
 
-object SinisterJukeboxSongs {
 
-    val item_id_identifiers: Map<String,Identifier> = createAllIdentifiers(SONG_IDS)
-    val WELCOME_HOME: ResourceKey<JukeboxSong> = ResourceKey.create(
-        Registries.JUKEBOX_SONG,
-        Identifier.fromNamespaceAndPath("sinister-discs", "welcome_home")
-    )
-    val I_MISS_THE_QUIET: ResourceKey<JukeboxSong> = ResourceKey.create(
-        Registries.JUKEBOX_SONG,
-        Identifier.fromNamespaceAndPath("sinister-discs","i_miss_the_quiet")
-    )
-    val YOU_MUST_ANSWER: ResourceKey<JukeboxSong> = ResourceKey.create(
-        Registries.JUKEBOX_SONG,
-        Identifier.fromNamespaceAndPath("sinister-discs","you_must_answer")
-    )
-    val MINDS: ResourceKey<JukeboxSong> = ResourceKey.create(
-        Registries.JUKEBOX_SONG,
-        Identifier.fromNamespaceAndPath("sinister-discs", "minds")
-    )
+object SinisterJukeboxSongs {
+    fun sinisterCreateJukeboxSong(name: String): ResourceKey<JukeboxSong> {
+        return ResourceKey.create(
+            Registries.JUKEBOX_SONG,
+            createIdentifier(name)
+        )
+    }
+
+
+
+    val SINISTER_SONGS: Map<String,ResourceKey<JukeboxSong>> =  run {
+        val tempMap: MutableMap<String,ResourceKey<JukeboxSong>> = mutableMapOf()
+        for (item in SONG_IDS) {
+            tempMap[item] = sinisterCreateJukeboxSong(item)
+        }
+        tempMap.toMap()
+    }
+
+
+
+
+
 
 
 }
