@@ -11,6 +11,10 @@ permissions:
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
+    # Define the Minecraft version here for reuse
+    env:
+      MC_VERSION: "1.21.11"
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -47,8 +51,9 @@ jobs:
           tag_name: ${{ steps.version.outputs.version_tag }}
           name: Release ${{ steps.version.outputs.version_tag }}
           generate_release_notes: true
-          
-            build/libs/sinister-discs-${{ steps.version.outputs.version_tag }}-FABRIC-*.jar
+         
+          files: |
+            build/libs/sinister-discs-${{ steps.version.outputs.version_tag }}-FABRIC-${{ env.MC_VERSION }}.jar
             !build/libs/*-sources.jar
             !build/libs/*-dev.jar
 
@@ -60,9 +65,10 @@ jobs:
           project: sinister-discs-lordx
           version: ${{ steps.version.outputs.version_tag }}
           loaders: fabric
-          game-versions: 1.21.11
+          # Uses the environment variable defined at the top
+          game-versions: ${{ env.MC_VERSION }}
           
-          files: build/libs/sinister-discs-${{ steps.version.outputs.version_tag }}-FABRIC-*.jar
+          files: build/libs/sinister-discs-${{ steps.version.outputs.version_tag }}-FABRIC-${{ env.MC_VERSION }}.jar
           status: draft
           dependencies: |
             [
