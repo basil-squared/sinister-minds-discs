@@ -1,8 +1,8 @@
 {
-  "sound_event": "sinister-discs:you_must_answer",
+  "comparator_output": 1,
   "description": {
     "translate": "item.sinister-discs.you_must_answer.desc"
   },
-  "length_in_seconds": 324,
-  "comparator_output": 2
+  "length_in_seconds": 341.0,
+  "sound_event": "sinister-discs:you_must_answer"
 }

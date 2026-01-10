@@ -1,0 +1,8 @@
+{
+  "comparator_output": 1,
+  "description": {
+    "translate": "item.sinister-discs.i_did_that.desc"
+  },
+  "length_in_seconds": 239.0,
+  "sound_event": "sinister-discs:i_did_that"
+}

@@ -1,0 +1,8 @@
+{
+  "comparator_output": 1,
+  "description": {
+    "translate": "item.sinister-discs.feel_that_dread.desc"
+  },
+  "length_in_seconds": 342.0,
+  "sound_event": "sinister-discs:feel_that_dread"
+}

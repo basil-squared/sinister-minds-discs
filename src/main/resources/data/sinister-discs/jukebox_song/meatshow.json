@@ -1,0 +1,8 @@
+{
+  "comparator_output": 1,
+  "description": {
+    "translate": "item.sinister-discs.meatshow.desc"
+  },
+  "length_in_seconds": 270.0,
+  "sound_event": "sinister-discs:meatshow"
+}

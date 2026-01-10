@@ -1,0 +1,8 @@
+{
+  "comparator_output": 1,
+  "description": {
+    "translate": "item.sinister-discs.big_misser.desc"
+  },
+  "length_in_seconds": 201.0,
+  "sound_event": "sinister-discs:big_misser"
+}

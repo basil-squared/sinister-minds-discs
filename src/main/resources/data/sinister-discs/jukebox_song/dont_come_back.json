@@ -1,0 +1,8 @@
+{
+  "comparator_output": 1,
+  "description": {
+    "translate": "item.sinister-discs.dont_come_back.desc"
+  },
+  "length_in_seconds": 354.0,
+  "sound_event": "sinister-discs:dont_come_back"
+}

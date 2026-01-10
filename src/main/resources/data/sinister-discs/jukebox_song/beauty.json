@@ -1,0 +1,8 @@
+{
+  "comparator_output": 1,
+  "description": {
+    "translate": "item.sinister-discs.beauty.desc"
+  },
+  "length_in_seconds": 293.0,
+  "sound_event": "sinister-discs:beauty"
+}

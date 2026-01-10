@@ -1,8 +1,8 @@
 {
-  "sound_event": "sinister-discs:minds",
+  "comparator_output": 1,
   "description": {
     "translate": "item.sinister-discs.minds.desc"
   },
-  "length_in_seconds": 323,
-  "comparator_output": 3
+  "length_in_seconds": 324.0,
+  "sound_event": "sinister-discs:minds"
 }
