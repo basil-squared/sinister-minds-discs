@@ -30,17 +30,4 @@ object ModUtils {
         return Identifier.fromNamespaceAndPath(SinisterDiscs.MOD_ID,name)
     }
 
-    /**
-     * Given a List of Strings, register identifiers using the names of all of those strings
-     * @param identifiers The list of to-be-registered names
-     */
-    fun createAllIdentifiers(identifiers: List<String>): Map<String,Identifier> {
-        val tempMap: MutableMap<String,Identifier> = mutableMapOf()
-        for (item in identifiers) {
-
-            tempMap[item] = createIdentifier(item)
-        }
-        // convert it back to a regular map before returning
-        return tempMap.toMap()
-    }
 }
