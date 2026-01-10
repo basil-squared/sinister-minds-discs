@@ -47,8 +47,8 @@ jobs:
           tag_name: ${{ steps.version.outputs.version_tag }}
           name: Release ${{ steps.version.outputs.version_tag }}
           generate_release_notes: true
-          files: |
-            build/libs/*.jar
+          
+            build/libs/sinister-discs-${{ steps.version.outputs.version_tag }}-FABRIC-*.jar
             !build/libs/*-sources.jar
             !build/libs/*-dev.jar
 
@@ -61,10 +61,9 @@ jobs:
           version: ${{ steps.version.outputs.version_tag }}
           loaders: fabric
           game-versions: 1.21.11
-          files: build/libs/*${{ steps.version.outputs.version_tag }}.jar
-          # Sets the release status to Draft as requested
+          
+          files: build/libs/sinister-discs-${{ steps.version.outputs.version_tag }}-FABRIC-*.jar
           status: draft
-          # Adds Fabric API and Fabric Language Kotlin as required dependencies
           dependencies: |
             [
               {"project_id": "fabric-api", "dependency_type": "required"},
