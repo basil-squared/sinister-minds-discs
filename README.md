@@ -1,6 +1,6 @@
 # Sinister Discs
 
-**Sinister Discs** adds a collection of tense, ominous, and atmospheric music discs to Minecraft, designed to enhance the feeling of danger and exploration.
+**Sinister Discs** adds the discs from Sinister Minds to Minecraft, because theyre cool :)
 
 
 
