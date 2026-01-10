@@ -1,7 +1,7 @@
 package basilsquared.sinisterdiscs
 
 import net.fabricmc.api.ModInitializer
-import net.minecraft.core.registries.BuiltInRegistries
+
 import org.slf4j.LoggerFactory
 
 object SinisterDiscs : ModInitializer {
@@ -15,6 +15,6 @@ object SinisterDiscs : ModInitializer {
 		ModItems.register()
 		ModSounds.register()
 		ModCreativeTabs.register() // Remember that minecraft will freak tf out if you register creative tabs first
-
+		ModLootTableModifiers.register()
 	}
 }
