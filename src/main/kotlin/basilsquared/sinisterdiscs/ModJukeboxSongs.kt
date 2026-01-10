@@ -1,11 +1,15 @@
 package basilsquared.sinisterdiscs
 
+import basilsquared.sinisterdiscs.ModUtils.SONG_IDS
+import basilsquared.sinisterdiscs.ModUtils.createAllIdentifiers
 import net.minecraft.core.registries.Registries
 import net.minecraft.resources.Identifier
 import net.minecraft.resources.ResourceKey
 import net.minecraft.world.item.JukeboxSong
 
 object SinisterJukeboxSongs {
+
+    val item_id_identifiers: Map<String,Identifier> = createAllIdentifiers(SONG_IDS)
     val WELCOME_HOME: ResourceKey<JukeboxSong> = ResourceKey.create(
         Registries.JUKEBOX_SONG,
         Identifier.fromNamespaceAndPath("sinister-discs", "welcome_home")
@@ -17,6 +21,10 @@ object SinisterJukeboxSongs {
     val YOU_MUST_ANSWER: ResourceKey<JukeboxSong> = ResourceKey.create(
         Registries.JUKEBOX_SONG,
         Identifier.fromNamespaceAndPath("sinister-discs","you_must_answer")
+    )
+    val MINDS: ResourceKey<JukeboxSong> = ResourceKey.create(
+        Registries.JUKEBOX_SONG,
+        Identifier.fromNamespaceAndPath("sinister-discs", "minds")
     )
 
 

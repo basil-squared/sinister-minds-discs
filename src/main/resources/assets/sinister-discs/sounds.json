@@ -18,5 +18,25 @@
         "stream": true
       }
     ]
+  },
+  "you_must_answer": {
+    "category": "record",
+    "subtitle": "subtitles.item.sinister-discs.you_must_answer",
+    "sounds": [
+      {
+        "name": "sinister-discs:records/you_must_answer",
+        "stream": true
+      }
+    ]
+  },
+  "minds": {
+    "category": "record",
+    "subtitle": "subtitles.item.sinister-discs.minds",
+    "sounds": [
+      {
+        "name": "sinister-discs:records/minds",
+        "stream": true
+      }
+    ]
   }
 }

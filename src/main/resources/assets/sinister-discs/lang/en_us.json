@@ -1,7 +1,11 @@
 {
-  "item.sinister-discs.welcome_home": "Music Disc",
-  "itemGroup.sinister-discs.general": "Sinister Discs",
-  "item.sinister-discs.welcome_home.desc": "churgney gurgney, marley jauz - Welcome Home",
   "item.sinister-discs.i_miss_the_quiet": "Music Disc",
-  "item.sinister-discs.i_miss_the_quiet.desc": "churgney gurgney, marley jauz - I Miss the Quiet"
+  "item.sinister-discs.i_miss_the_quiet.desc": "Lord X - I Miss the Quiet",
+  "item.sinister-discs.minds": "Music Disc",
+  "item.sinister-discs.minds.desc": "Lord X ft. Majin - Minds",
+  "item.sinister-discs.welcome_home": "Music Disc",
+  "item.sinister-discs.welcome_home.desc": "Lord X - Welcome Home",
+  "item.sinister-discs.you_must_answer": "Music Disc",
+  "item.sinister-discs.you_must_answer.desc": "Lord X - You Must Answer",
+  "itemGroup.sinister-discs.general": "Sinister Discs"
 }
