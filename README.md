@@ -2,10 +2,10 @@
 
 **Sinister Discs** adds a collection of tense, ominous, and atmospheric music discs to Minecraft, designed to enhance the feeling of danger and exploration.
 
-## 🎵 About
+##  About
 This mod introduces a new set of Music Discs found in [mention where they spawn, e.g., Nether Fortresses, Ancient Cities, etc.]. The tracks focus on dark ambient and chase-scene style music, perfect for players looking for a grittier audio experience in their worlds.
 
-## 💿 Tracklist & Credits
+##  Tracklist & Credits
 This project would not be possible without the incredible work of the following artists. Please support them!
 
 Churgney Gurgney
