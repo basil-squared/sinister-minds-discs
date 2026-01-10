@@ -69,7 +69,7 @@ jobs:
           game-versions: ${{ env.MC_VERSION }}
           
           files: build/libs/sinister-discs-${{ steps.version.outputs.version_tag }}-FABRIC-${{ env.MC_VERSION }}.jar
-          status: draft
+          status: listed
           dependencies: |
             [
               {"project_id": "P7dR8mSH", "dependency_type": "required"},
