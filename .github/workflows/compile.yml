@@ -72,6 +72,6 @@ jobs:
           status: draft
           dependencies: |
             [
-              {"project_id": "fabric-api", "dependency_type": "required"},
-              {"project_id": "fabric-language-kotlin", "dependency_type": "required"}
+              {"project_id": "P7dR8mSH", "dependency_type": "required"},
+              {"project_id": "Ha28R6CL", "dependency_type": "required"}
             ]
