@@ -20,13 +20,14 @@ fun addToPool(pool: LootPool.Builder,item: ItemLike, weight: Int) {
     )
 }
 object ModLootTableModifiers {
-    private val NETHER_BRIDGE_CHEST_ID = Identifier.fromNamespaceAndPath("minecraft","chest/nether_bridge")
+    private val NETHER_BRIDGE_CHEST_ID = Identifier.fromNamespaceAndPath("minecraft","chests/nether_bridge")
 
     fun register() {
         // Lambdas! Hoorah! Don't quite understand these but im gonna try to learn
         // OOO, so they're like uhh. anonymous quick one-off functions! fun :)
         LootTableEvents.MODIFY.register {key, tableBuilder, source, _ ->
-                if (source.isBuiltin && NETHER_BRIDGE_CHEST_ID == key) {
+                if (source.isBuiltin && NETHER_BRIDGE_CHEST_ID == key.identifier()) {
+                    println("DEBUG: Found the Nether Bridge! Injecting songs...")
                     // this is the actual pool to make
                     val poolBuilder: LootPool.Builder = LootPool.lootPool()
                         .setRolls(UniformGenerator.between(0F,1F))
